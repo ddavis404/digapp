@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { PlayerProvider } from './PlayerContext'; // Import the PlayerProvider
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* Wrap your App component with the PlayerProvider */}
+    <PlayerProvider>
+      <App />
+    </PlayerProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

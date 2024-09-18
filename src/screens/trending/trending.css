@@ -1,0 +1,85 @@
+.screen-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e2a3e; /* Match your app's color scheme */
+    color: #c4d0e3;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .favorites-body {
+    width: 100%;
+    max-width: 1200px; /* Limit the max width for larger screens */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background-color: #1e2a3e;
+    color: #c4d0e3;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .favorites-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #e99d72;
+    text-align: center; /* Center the title */
+  }
+  
+  .favorites-tracks {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Spacing between grid items */
+    justify-items: center; /* Center the grid items */
+    align-items: start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .track-card {
+    background-color: rgb(30, 42, 62);
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px; /* Ensure max width for cards */
+    box-sizing: border-box;
+    overflow: hidden; /* Ensure content doesn't overflow the card */
+  }
+  
+  .track-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .track-image {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover; /* Make sure images cover the card area */
+  }
+  
+  .track-info {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .track-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #c4d0e3;
+    margin: 5px 0;
+  }
+  
+  .track-artist {
+    font-size: 14px;
+    color: #c4d0e37c;
+  }
+  

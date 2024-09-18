@@ -1,7 +1,31 @@
 .main-body{
     height: 100vh;
     width: 100vw;
-    background-color: #E99D72;
+    background-color: #000080;
     border-radius: 30px;
     display: flex;
 }
+
+.main-body {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .content {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 100px; /* Add padding to prevent content from going behind the player */
+  }
+  
+  .footer-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 250px); /* Adjust width according to the sidebar */
+    height: 80px; /* Adjust the height of the player as needed */
+    background-color: #1e2a3e; /* Match the color scheme */
+    z-index: 100;
+  }
+  

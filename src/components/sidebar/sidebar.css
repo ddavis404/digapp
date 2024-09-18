@@ -1,15 +1,63 @@
-.sidebar-container{
+/* Sidebar Container */
+.sidebar-container {
     width: 100px;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-}
-
-.profile-img{
+    position: fixed; /* Keep sidebar fixed */
+    top: 0;
+    left: 0;
+    background-color: #1e2a3e;
+    transition: transform 0.3s ease-in-out;
+    z-index: 10; /* Ensure the sidebar is on top */
+  }
+  
+  .sidebar-container.closed {
+    transform: translateX(-100%); /* Hide sidebar */
+  }
+  
+  .sidebar-container.open {
+    transform: translateX(0); /* Show sidebar */
+  }
+  
+  /* Profile Image */
+  .profile-img {
     width: 50px;
     height: 50px;
     border-radius: 20px;
     margin-top: 20px;
-}
+  }
+  
+  /* Menu Icon */
+  .menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 15; /* Ensure the menu icon is on top */
+    display: none; /* Hidden by default */
+  }
+  
+  /* Media Query for Smaller Screens */
+  @media (max-width: 768px) {
+    .sidebar-container {
+      transform: translateX(-100%); /* Hide sidebar by default on small screens */
+    }
+  
+    .menu-icon {
+      display: block; /* Show menu icon on small screens */
+    }
+  }
+  
+  /* Media Query for Larger Screens */
+@media (min-width: 1024px) {
+    .sidebar-container {
+      transform: translateX(0); /* Show sidebar */
+    }
+    .menu-icon {
+      display: none; /* Hide menu icon on large screens */
+    }
+  }
+  
